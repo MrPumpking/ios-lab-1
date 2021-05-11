@@ -1,10 +1,3 @@
-//
-//  WeatherModel.swift
-//  Mobile
-//
-//  Created by Guest User on 04/05/2021.
-//
-
 import Foundation
 
 struct WeatherModel {
@@ -25,7 +18,7 @@ struct WeatherModel {
         var temperature: Float = Float.random(in: -10.0 ... 30.0)
         var humidty: Float = Float.random(in: 0 ... 100)
         var windSpeed: Float = Float.random(in: 0 ... 5)
-        var windDiretion: Float = Float.random(in: 0 ..< 360)
+        var windDirection: Float = Float.random(in: 0 ..< 360)
     }
     
     mutating func refresh(record: WeatherRecord) {
