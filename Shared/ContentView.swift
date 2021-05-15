@@ -48,7 +48,7 @@ struct WeatherView: View {
                         verbatim: viewModel.getIcon(record: record))
                         .font(.system(size: geometry.size.width))
                     // Ustawiam maksymalny rozmiar kontera ikony
-                }.frame(maxWidth: 48)
+                }.frame(maxWidth: Constants.UI.weatherIconMaxWidth)
                 // Spacer zapewnia odstep miedzy elementami
                 Spacer()
                 // VStack zeby ulozyc elementy w kolumnie
