@@ -47,7 +47,9 @@ struct WeatherView: View {
                     Text(
                         verbatim: viewModel.getIcon(record: record))
                         .font(.system(size: geometry.size.width))
-                    // Ustawiam maksymalny rozmiar kontera ikony
+                    // Ustawiam maksymalny rozmiar kontenera ikony
+                    // W ten sposób ikona będzie responsywna, ale nie
+                    // bedzie rozciagac sie ponad ten rozmiar
                 }.frame(maxWidth: Constants.UI.weatherIconMaxWidth)
                 // Spacer zapewnia odstep miedzy elementami
                 Spacer()
