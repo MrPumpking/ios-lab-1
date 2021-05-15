@@ -1,7 +1,6 @@
 import Foundation
 
 struct WeatherModel {
-    
     var records: Array<WeatherRecord> = []
     
     init(cities: Array<String>) {
@@ -11,10 +10,18 @@ struct WeatherModel {
         }
     }
     
+    enum WeatherState: String, CaseIterable {
+        case Clear = "Clear"
+        case HeavyRain = "Heavy Rain"
+        case Snow = "Snow"
+    }
+    
     struct WeatherRecord: Identifiable {
         var id: UUID = UUID()
         var cityName: String
-        var weatherState: String = "Heavy Rain"
+        var weatherState: WeatherState = WeatherState
+            .allCases
+            .randomElement() ?? WeatherState.Clear
         var temperature: Float = Float.random(in: -10.0 ... 30.0)
         var humidty: Float = Float.random(in: 0 ... 100)
         var windSpeed: Float = Float.random(in: 0 ... 5)

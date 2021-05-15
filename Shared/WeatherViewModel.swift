@@ -25,12 +25,11 @@ class WeatherViewModel: ObservableObject {
         model.refresh(record: record)
     }
     
-    
     func getIcon(record: WeatherModel.WeatherRecord) -> String {
         switch record.weatherState {
-        case "Snow":
+        case WeatherModel.WeatherState.Snow:
             return "🌨"
-        case "Heavy Rain":
+        case WeatherModel.WeatherState.HeavyRain:
             return "🌧"
         default:
             return "☀️"
